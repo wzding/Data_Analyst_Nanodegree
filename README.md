@@ -7,7 +7,7 @@ This repository contains project files and lecture notes for Udacity's Data Anal
 ### Part 1: Introduction
 ### Part 2: Statistics
 ### Part 3: Intro to Data Analysis
--- project: Investigate a Dataset
+-- project: [Investigate a Dataset](https://github.com/wzding/Data_Analyst_Nanodegree/tree/master/Titanic)
 ### Part 4: Data Wrangling
 -- project: [Wrangle OpenStreetMap Data](https://github.com/wzding/Data_Analyst_Nanodegree/tree/master/OpenStreetMap)
 ### Part 5: Exploraroty Data Analysis
