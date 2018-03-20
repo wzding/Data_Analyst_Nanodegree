@@ -11,7 +11,7 @@ This repository contains project files and lecture notes for Udacity's Data Anal
 ### Part 4: Data Wrangling
 -- project: [Wrangle OpenStreetMap Data](https://github.com/wzding/Data_Analyst_Nanodegree/tree/master/OpenStreetMap)
 ### Part 5: Exploraroty Data Analysis
--- project: [Explore and Summarize Data](https://github.com/wzding/Data_Analyst_Nanodegree/tree/master/ChicagoTaxiTrips)
+-- project: [A Case Study of Chicago Taxi Trips](https://github.com/wzding/Data_Analyst_Nanodegree/tree/master/ChicagoTaxiTrips)
             
 ### Part 6: Intro to Machine Learning
 -- project: [Identify Fraud from Enron Email](https://github.com/wzding/Data_Analyst_Nanodegree/tree/master/FraudDetection)
