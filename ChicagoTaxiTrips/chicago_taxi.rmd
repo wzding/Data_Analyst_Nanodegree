@@ -1,16 +1,17 @@
 ---
-title: "Explore Chicago Taxi Trips"
+title: "Exploraroty Data Analysis A Case Study of Chicago Taxi Trips"
 output:
   html_document: default
   pdf_document: default
 author: "Wenzhe(Emma) Ding"
+Time: 
 ---
 
 ========================================================
 
-> **Introduction**: In this project, we will be analyzing City of Chicago taxi trip data to understand patterns in taxi ridership. The main taxi dataset is a publicly available government data which allow us to gain access to more than 200,000 taxi rides in Chicago from January 1 2017 to January 7 2017.
+> **Introduction**: In this project, we will be analyzing City of Chicago taxi trip data to understand patterns in taxi ridership. The main taxi dataset is a publicly available government data which allows us to gain access to more than 200,000 taxi rides in Chicago from January 1 2017 to January 7 2017.
 
-> **Data Source**: This dataset could be downloaded  from the link below. It includes the following information for each taxi trip: taxi company, both trip start and end times, length of the trip in both time and distance, starting and ending census tract, exact Starting and ending location, trip cost. Data source: 
+> **Data Source**: This dataset could be downloaded from the link below. It includes the following information for each taxi trip: taxi company, both trip start and end times, length of the trip in both time and distance, starting and ending census tract, exact Starting and ending location, trip cost. Data source: 
 https://data.cityofchicago.org/Transportation/Taxi-Trips/wrvz-psew/data. Detailed introduction of this data set is on http://digital.cityofchicago.org/index.php/chicago-taxi-data-released/.
 
 ```{r global_options, include=FALSE}
@@ -32,11 +33,11 @@ library(RColorBrewer)
 ```{r echo=FALSE, Load_the_Data}
 # Load the Data
 taxi <- read.csv("chicago_taxi_20170101_0107.csv")
-nrow(taxi) # number of observations
+# nrow(taxi) # number of observations
 colnames(taxi)
 ```
 
-> **Filter out outlier**: Our dataset consists of 12 variables, with 219,003 observations. As it is dictated in the official document, "the dataset is collected from a variety of hardware and software under real-world conditions", there are some extreme values that likely to be wrong. For example, there are trips with both mileage and trip duration equal to zero, while its cost is over $1000. For a certain trip, we believe it is not plausible to have a mileage over 160 but trip time is less than 10 seconds. We simply deleted such records for further analysis. After cleaning the ourliers, we have a total of 218832 trips.
+> **Filter out Outlier**: Our dataset consists of 12 variables, with 219,003 observations. As it is dictated in the official document, "the dataset is collected from a variety of hardware and software under real-world conditions", there are some extreme values that likely to be wrong. For example, there are trips with both mileage and trip duration equal to zero, while its cost is over $1000. For a certain trip, we believe it is not plausible to have a mileage over 160 but trip time is less than 10 seconds. We simply deleted such records for further analysis. After cleaning the ourliers, we have a total of 218832 trips.
 
 ```{r echo=FALSE, Outliers}
 # filter out outliers
@@ -82,7 +83,7 @@ taxi$Week[taxi$Date %in% c('01/06','01/01')]  <- "Weekend"
 
 # Univariate Plots Section
 
-> **Trip duration**: Our first question is about the distribution of trip duration.
+> **Trip duration**: Our first investigation is about the distribution of trip duration.
 
 ```{r echo=FALSE, Univariate_Plots1}
 summary(taxi$Trip.Min)
