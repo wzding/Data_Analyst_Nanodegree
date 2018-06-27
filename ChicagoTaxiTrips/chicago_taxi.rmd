@@ -1,10 +1,8 @@
 ---
 title: "Exploraroty Data Analysis A Case Study of Chicago Taxi Trips"
 output:
-  html_document: default
-  pdf_document: default
+  html_document
 author: "Wenzhe(Emma) Ding"
-Time: 
 ---
 
 ========================================================
@@ -19,6 +17,13 @@ knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
 ```
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, packages}
+install.packages("ggmap")
+install.packages("maps")
+install.packages("ggthemes")
+install.packages("psych")
+install.packages("grid")
+install.packages("gridExtra")
+install.packages("RColorBrewer")
 library(ggplot2)
 library(ggmap)
 library(maps)
@@ -28,6 +33,7 @@ library(psych)
 library(grid)
 library(gridExtra)
 library(RColorBrewer)
+library(shiny)
 ```
 
 ```{r echo=FALSE, Load_the_Data}
